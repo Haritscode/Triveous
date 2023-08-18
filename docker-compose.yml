@@ -1,0 +1,31 @@
+version: '3.9'
+services:
+  apis:
+    container_name: apis
+    build: ./server
+    networks:
+      - triveous
+    ports:
+      - 4000:4000
+    volumes:
+      - ./server:/app
+    depends_on:
+      - db
+  db:
+    container_name: triveous_db
+    image: mysql:latest
+    networks:
+      - triveous
+    restart: always
+    volumes:
+      - db:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: Harit1273#
+      MYSQL_DATABASE: triveous_db
+      MYSQL_PASSWORD: Haritscode1273# 
+    ports:
+      - '3306:3306'
+volumes:
+  db:
+networks:
+  triveous:

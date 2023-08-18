@@ -1,0 +1,5 @@
+create database triveous_db;
+
+create table user(uid char(40) primary key,first_Name char(50) not null,Last_Name char(50) not null,email char(100) not null unique, password varchar(50) not null);
+
+create table addresses (uid char(40) not null,contact int(10) unique,country_code char(5) not null, address varchar(1000) not null, pin_code int(10) not null, state varchar(50) not null,city varchar(50) not null,country varchar(50) not null, foreign key (uid) references user(uid));
