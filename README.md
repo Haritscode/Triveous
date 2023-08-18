@@ -3,5 +3,7 @@
 <summary>
 Create DB Tables:
 </summary>
-    To create table a dbQuery file is provided please use the querys and run by all the query all at once and you are good to go.
+    To setup database, Create db and table usings Schema.sql file which is provided here. please use the querys to create database and tables by running all the query at once and you are good to go.
 </details>
+
+<>
