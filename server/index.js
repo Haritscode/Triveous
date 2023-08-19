@@ -6,7 +6,6 @@ const errorHandler=require("./handler/errorhandler.handler");
 const auth=require("./routes/auth.route");
 const cookieParser=require("cookie-parser");
 const { verifyToken } = require('./handler/token.handler');
-const dummyData = require('./controller/dummyData.controller');
 const products=require('./routes/products.route');
 const carts=require("./routes/carts.route");
 const orders=require('./routes/orders.route');
@@ -28,10 +27,6 @@ app.use(cors({
 app.use(cookieParser())
 app.use(express.json())
 app.use('/auth',auth);
-
-// to push data to database uncomment this route and from browser jush request http://localhost:4000/dummydata and it will automatically push the data to the database
-// app.get('/dummydata',dummyData)
-
 app.use(verifyToken)
 
 app.get("/",(req,res)=>{

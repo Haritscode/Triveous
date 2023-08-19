@@ -4,7 +4,6 @@ const updateCartItem=(req,res,next)=>{
     const {uid}=req.userInfo;
     const {pid}=req.params;
     const {quantity}=req.body;
-    console.log({quantity});
     db.query(`update cart set quantity=${quantity}  where userId="${uid}" and productId="${pid}"`,(err,result)=>{
         if(err){
             next(new ErrorHandler())
