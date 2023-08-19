@@ -11,7 +11,7 @@ Create DB Tables:
 <summary>
 Dummy data for Database
 </summary>
-Also, I'm Providing the dummy data which i had used for the developement of the api. You can directly import the data into your MYSQL Database using the .sql files present in the dir dbData. These data files are for most import tables i.e products and categories
+Also, I'm Providing the dummy data which i had used for the developement of theis API's. You can directly import the data into your MYSQL Database using .sql files present in the dir "dbData". These data files are for most import tables i.e products and categories which is to be imported for proper functioninig of the APIS.
 </details>
 
 <>
