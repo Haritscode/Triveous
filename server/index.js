@@ -7,7 +7,9 @@ const auth=require("./routes/auth.route");
 const cookieParser=require("cookie-parser");
 const { verifyToken } = require('./handler/token.handler');
 const dummyData = require('./controller/dummyData.controller');
-const products=require('./routes/products.route')
+const products=require('./routes/products.route');
+const carts=require("./routes/carts.route");
+const orders=require('./routes/orders.route');
 require("./config/mysql.config").connect(err=>{
     if(err){
         console.log(err);
@@ -36,6 +38,8 @@ app.get("/",(req,res)=>{
     res.status(200).send({msg:"Hello message"})
 })
 app.use("/products",products)
+app.use("/carts",carts);
+app.use("/orders",orders)
 app.use(errorHandler);
 app.listen(port,()=>{
     console.log(`server Running at port ${port}`);

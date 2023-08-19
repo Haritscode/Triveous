@@ -7,7 +7,7 @@ const categoriesList=require('../controller/categorieList.controller');
 const router=Router();
 router.get('/',allProducts);
 router.get('/search',searchProduct);
-router.get('/categories',categoriesList)
-router.get("/:id",singleProduct);
-router.get('/:category',categoryProducts);
+router.get('/categories',categoriesList);
+router.get('/category/:category',categoryProducts);
+router.get("/id/:id",singleProduct);
 module.exports=router;
